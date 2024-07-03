@@ -1,0 +1,33 @@
+Aplicativo: Lembretes App
+ 
+1) Requisitos (o que ela vai fazer?)
+ 
+- Listar lembretes; 
+- Criar lembrete;
+- Excluir lembrete;
+- Consultar lembrete;
+- Editar lembrete;
+ 
+2) Dados (quais dados ela terá?)
+ 
+Lembrete (id, titulo, corpo)
+ 
+3) Rotas (Direcionamentos)
+                Qual método/verbo HTTP? Qual endereço? Quais parâmetros?
+ 
+- Listar lembretes   (GET)   /applembretes/lembretes  vazio
+- Criar lembrete     (POST)  /applembretes/lembrete   titulo,corpo
+- Excluir lembrete   (DELETE)/applembretes/lembrete/7 id quero deletar
+- Consultar lembrete (GET)   /applembretes/lembrete/9 id quero consultar 
+- Editar lembrete    (PUT)   /applembretes/lembrete/7 id quero alterar 
+						      titulo, corpo
+ 
+OO                                     -----                    PHP Estruturado
+ 
+- Listar lembretes   (GET)   /applembretes/lembretes           /applembretes/getall.php
+- Criar lembrete     (POST)  /applembretes/lembrete            /applembretes/create.php 							       (param: titulo/corpo)
+- Excluir lembrete   (DELETE)/applembretes/lembrete/7          /applembretes/delete.php
+							       (param: id)
+- Consultar lembrete (GET)   /applembretes/lembrete/9          /applembretes/get.php?id=9
+- Editar lembrete    (PUT)   /applembretes/lembrete/7          /applembretes/update.php 
+                                                               (param: id, titulo, corpo) 
