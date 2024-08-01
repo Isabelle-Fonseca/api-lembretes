@@ -8,9 +8,10 @@ $metodo=strtoupper($_SERVER['REQUEST_METHOD']);
 if ($metodo ==='GET'){
     $sql=$pdo->query("SELECT * FROM lembrete");
 
+    
     if($sql->rowCount()>0){
         $dados=$sql->fetchAll(PDO::FETCH_ASSOC);
-    
+        var_dump($dados);
         foreach ($dados as $linha){
             $array['result'][]=[
                 'id'=>$linha['idLembrete'],
